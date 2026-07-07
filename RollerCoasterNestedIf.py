@@ -1,11 +1,13 @@
 print("Welcome to the Rollercoaster!")
 
 height = int(input("ENter your height in CM : "))
-minor_age_ticket_price = "7$"
-major_age_ticket_price = "12$"
-children_ticket_price = "5$"
+minor_age_ticket_price = 7
+major_age_ticket_price = 12
+children_ticket_price = 5
 minor_age = 18
 children = 12
+photo_price = 3
+bill = 0
 
 
 if height >= 120:
@@ -14,10 +16,19 @@ if height >= 120:
 
 
     if age <= children:
-        print(f"Please pay {children_ticket_price} at the counter")
+        print(f"Child tickets are ${children_ticket_price}")
+        bill = children_ticket_price
     elif age <= minor_age :
-        print(f"Please pay {minor_age_ticket_price} at the counter")
+        bill = minor_age_ticket_price
+        print(f"Youth tickets are ${minor_age_ticket_price}")
     else:
-        print(f"please pay {major_age_ticket_price} at the ticket counter")
+        bill = major_age_ticket_price
+        print(f"Adults tickets are ${major_age_ticket_price}")
+
+    photo = input("Do You want to have photo take? type y for Yes and n for No.")
+    if photo == "y" :
+        bill += photo_price
+    print(f"Your Total Bill = ${bill}")
+
 else:
     print("Sorry you have to groww before you can ride :)")
