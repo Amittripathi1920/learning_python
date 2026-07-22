@@ -34,6 +34,10 @@ if ( ui_password_length >= ui_symbols_length or ui_password_length >= ui_numbers
         password += symbols[random.randint(0,9)]
 
 
-password_final = "".join(random.sample(password, len(password)))
 
-print(f"---------------------------------------\nYour Final Password is : {password_final}\n---------------------------------------\n")
+    password_final = "".join(random.sample(password, len(password)))
+
+    print(f"---------------------------------------\nYour Final Password is : {password_final}\n---------------------------------------\n")
+
+else:
+    print(f"Incorrect Combination Total length must be grater than sum of symbols and digits length\nYour selection :- \nTotal Letters :- {ui_password_length}\nTotal Symbols :- {ui_symbols_length}\nTotal Digits :- {ui_numbers_length}\nTotal Symbols & Digit :- {ui_symbols_length + ui_numbers_length}")
