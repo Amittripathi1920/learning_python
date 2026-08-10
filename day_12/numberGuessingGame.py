@@ -35,14 +35,14 @@ while continue_game:
         print(f"You have {max_attempts} attempts remaining to guess the number")
         u_input = int(input("Make a Guess: "))
         # x = numberCheck(random_digit=random_digit, u_input=u_input, max_attempts=max_attempts)
-        print(random_digit)
+        # print(random_digit)
         if random_digit < u_input:
             max_attempts -= 1
             print("Too High") 
         elif random_digit > u_input:
             max_attempts -= 1
             print( "Too Low")
-        else :
+        else:
             print( "You Got it! Congratulations Winner")  
             break
 
